@@ -2,7 +2,7 @@ from distutils.core import setup
 setup(
   name = 'cropyble',
   packages = ['cropyble'],
-  version = '1.1.0',
+  version = '1.1.1',
   license='MIT',
   description = 'Cropyble is a module that allows a user to easily perform crops on an image containing recognizable text. This module utilizes optical character recognition (OCR) from Google by way of pytesseract.',
   author = 'Skyler Burger',
