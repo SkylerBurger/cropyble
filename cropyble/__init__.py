@@ -1,1 +1,1 @@
-from cropyble import cropyble
+from cropyble import Cropyble
