@@ -8,7 +8,7 @@ setup(
   author = 'Skyler Burger',
   author_email = 'skylerburger@gmail.com',
   url = 'https://github.com/SkylerBurger/cropyble',
-  download_url = 'https://github.com/SkylerBurger/cropyble/archive/v_01.tar.gz',
+  download_url = 'https://github.com/SkylerBurger/cropyble/archive/v1.1.0.tar.gz',
   keywords = ['OCR', 'tesseract', 'pytesseract', 'crop', 'character recognition'],
   install_requires=[
           'pytesseract',
