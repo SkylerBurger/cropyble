@@ -4,7 +4,9 @@
 **Version**: 1.1.4
 
 ## Overview
-Cropyble is a class that allows a user to easily perform crops on an image containing recognizable text. This class utilizes optical character recognition (OCR) with the assitance of Tesseract and Pytesseract.
+Cropyble is a class that allows a user to easily perform crops on an image containing recognizable text. This class utilizes optical character recognition (OCR) with the assitance of Tesseract and Pytesseract. Images containing clear, printed, non-decorative text work best with the OCR capabilities.
+
+This is :sparkles: my first package on PyPI :sparkles: and I welcome feedback to improve both the package and my skills as a package author/maintainer. Feel free to submit issues if you spot an area that could use improvement. 
 
 ## Architecture
 ### Packages
@@ -12,15 +14,23 @@ Cropyble is a class that allows a user to easily perform crops on an image conta
 - [**pytesseract**](https://github.com/madmaze/pytesseract): Python bindings for Tesseract
 - [**tesseract**](https://github.com/tesseract-ocr/tesseract): a command-line program and OCR engine
 
-### Python Standard Library
-- [**os**](https://docs.python.org/3/library/os.html)
-
 ## Getting Started
 ### Linux & Mac OS
 - This class requires an additional piece of software that is not available through PyPI. Install [tesseract](https://github.com/tesseract-ocr/tesseract) on your machine with `sudo apt-get install tesseract-ocr`
 - Install Cropyble with either `pip3 install cropyble` or preferably with `pipenv install cropyble`
 - Place the following import statement at the top of your file: `from cropyble import Cropyble`
 - Create Cropyble instances and get to cropping!
+
+### Example:
+````python
+# example.py
+
+from cropyble import Cropyble
+
+my_img = Cropyble('demo.jpg')
+my_img.crop('world', 'output.jpg')
+````
+In the above example, imagine that `demo.jpg` is an image that contains the words 'hello world' and is located in the same directory as `example.py`. An instance of Cropyble is created with a path to the input image. Cropyble then performs OCR on the image and stores information regarding the characters and words recognized, as well as their bounding boxes, within the instance of the class. By calling the `.crop()` method of the instance with a word contained in the image and a path to an output file, a cropped image of the word is created. The output file is created if it does not exist, or is overwritten if it already exists.
 
 ## API
 - **Cropyble()**: Takes in a string representing the input image location. Cropyble runs OCR on the image and stores the bounding boxes for recognized words and characters for future crops.
