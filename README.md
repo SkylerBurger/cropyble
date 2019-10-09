@@ -1,27 +1,26 @@
 # Cropyble
 
 **Author**: Skyler Burger
-**Version**: 1.1.0
+**Version**: 1.1.4
 
 ## Overview
-Cropyble is a module that allows a user to easily perform crops on an image containing recognizable text. This module utilizes optical character recognition (OCR) from Google by way of pytesseract.
-
-## Getting Started
-### Linux & Mac OS
-- Clone this repo to your machine with `git clone https://github.com/SkylerBurger/cropyble.git`
-- Install tesseract on your machine with `sudo apt-get install tesseract-ocr`
-- Create a Python virtual environment from within the top-level directory of this repo with `pipenv shell`
-- Install the required dependencies within your virtaul environment with `pipenv install`
-- Run main.py with `cropyble.py`
+Cropyble is a class that allows a user to easily perform crops on an image containing recognizable text. This class utilizes optical character recognition (OCR) with the assitance of Tesseract and Pytesseract.
 
 ## Architecture
 ### Packages
-- [**pillow**](https://python-pillow.org/)
-- [**pytesseract**](https://github.com/madmaze/pytesseract)
-- [**tesseract**](https://github.com/tesseract-ocr/tesseract)
+- [**pillow**](https://python-pillow.org/): a Python package for manipulating images
+- [**pytesseract**](https://github.com/madmaze/pytesseract): Python bindings for Tesseract
+- [**tesseract**](https://github.com/tesseract-ocr/tesseract): a command-line program and OCR engine
 
 ### Python Standard Library
 - [**os**](https://docs.python.org/3/library/os.html)
+
+## Getting Started
+### Linux & Mac OS
+- This class requires an additional piece of software that is not available through PyPI. Install [tesseract](https://github.com/tesseract-ocr/tesseract) on your machine with `sudo apt-get install tesseract-ocr`
+- Install Cropyble with either `pip3 install cropyble` or preferably with `pipenv install cropyble`
+- Place the following import statement at the top of your file: `from cropyble import Cropyble`
+- Create Cropyble instances and get to cropping!
 
 ## API
 - **Cropyble()**: Takes in a string representing the input image location. Cropyble runs OCR on the image and stores the bounding boxes for recognized words and characters for future crops.
@@ -39,3 +38,7 @@ Cropyble is a module that allows a user to easily perform crops on an image cont
 
 08/02/2019 - 1.1.0
 - Cropyble can now crop words and characters recognized within an image using the same crop() method.
+
+10/08/19 - 1.1.4
+- Refactored for packaging
+- Uploaded to PyPI, bumpy ride
