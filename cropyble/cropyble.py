@@ -14,6 +14,17 @@ class Cropyble:
         self.width = 0
         self._image_to_data()
 
+    def __repr__(self):
+        """Returns a representation of a Cropyble object."""
+        return f'<Cropyble image={self.input_image_path}>'
+
+    def __str__(self):
+        """Returns a verbose string representation of a Cropyble object."""
+        string_representation = f'Cropyble Object for image: {self.input_image_path}\n'
+        for key, value in self.box_data.items():
+            string_representation += f'Word: {key} - Location: {value}\n'
+        return string_representation
+
     def _image_to_data(self):
         """
         Utilizes pytesseract OCR to generate bounding box data for the image.

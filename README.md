@@ -52,3 +52,6 @@ In the above example, imagine that `demo.jpg` is an image that contains the word
 10/08/19 - 1.1.4
 - Refactored for packaging
 - Uploaded to PyPI, bumpy ride
+
+01/06/20 - 1.2.0
+- Implemented __repr__ and __str__ for Cropyble class.
