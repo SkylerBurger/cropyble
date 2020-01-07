@@ -8,6 +8,7 @@ setup(
   version = '1.2.0',
   license='MIT',
   long_description=README,
+  long_description_content_type='text/markdown',
   description = 'Cropyble is a module that allows a user to easily perform crops on an image containing recognizable text. This module utilizes optical character recognition (OCR) from Google by way of pytesseract.',
   author = 'Skyler Burger',
   author_email = 'skylerburger@gmail.com',
