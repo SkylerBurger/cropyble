@@ -1,7 +1,7 @@
 # Cropyble
 
 **Author**: Skyler Burger
-**Version**: 1.2.0
+**Version**: 1.2.1
 
 ## Overview
 Cropyble is a class that allows a user to easily perform crops on an image containing recognizable text. This class utilizes optical character recognition (OCR) with the assitance of Tesseract OCR and Pytesseract. Images containing clear, printed, non-decorative text work best with the OCR capabilities.
@@ -58,3 +58,6 @@ In the above example, imagine that `demo.jpg` is an image that contains the word
 01/06/20 - 1.2.0
 - Added `__repr__` and `__str__` magic methods to Cropyble class.
 - Added `.get_box()` and `.get_words()` methods to Cropyble class
+
+01/07/20 - 1.2.1
+- Re-released to PyPI
