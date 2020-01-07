@@ -1,6 +1,9 @@
-from distutils.core import setup
+import pathlib
+from setuptools import setup
 
-README = ('./README.md').read_text()
+HERE = pathlib.Path(__file__).parent
+
+README = (HERE / 'README.md').read_text()
 
 setup(
   name = 'cropyble',
@@ -13,7 +16,7 @@ setup(
   author = 'Skyler Burger',
   author_email = 'skylerburger@gmail.com',
   url = 'https://github.com/SkylerBurger/cropyble',
-  download_url = 'https://github.com/SkylerBurger/cropyble/archive/1.2.0.tar.gz',
+  download_url = 'https://github.com/SkylerBurger/cropyble/archive/1.2.1.tar.gz',
   keywords = ['OCR', 'tesseract', 'pytesseract', 'crop', 'character recognition'],
   install_requires=[
           'pytesseract',
